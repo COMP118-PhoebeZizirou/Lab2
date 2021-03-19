@@ -8,6 +8,7 @@
 */
 
 #include<iostream>
+#include <cassert> 
 
 using namespace std;
 
@@ -117,6 +118,8 @@ void showMenu()
 
 void drawHorizontalLine(const int length, const char ch)
 {
+    assert(length > 0);
+
     cout << "I am drawHorizalLine" << endl;
 
     int i;
@@ -138,6 +141,8 @@ void drawHorizontalLine(const int length, const char ch)
 
 void drawVerticalLine(const int height, const char ch)
 {
+    assert(height > 0);
+
     cout << "I am drawVerticalLine" << endl;
 
     int i;
@@ -157,6 +162,8 @@ void drawVerticalLine(const int height, const char ch)
 */
 void drawSquare(const int size, const char ch)
 {
+    assert(size > 0);
+
     cout << "I am drawSquare" << endl;
 
     int i, j;
@@ -188,12 +195,15 @@ void drawSquare(const int size, const char ch)
 * to arguments
 *<BR>
 * @param length The length of the rectangle to be drawn, must be greater than 0
-* @param height The height of the rectangle to be drawn
+* @param height The height of the rectangle to be drawn, must be greater than 0
 * @param ch The symbol used to draw the line
 */
 
 void drawRectangle(const int length, const int height, const char ch)
 {
+    assert(length > 0);
+    assert(height > 0);
+
     cout << "I am drawRectangle" << endl;
 
     int i, j;
